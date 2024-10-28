@@ -1,0 +1,34 @@
+[
+    {
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "eta": 30,
+        "indirizzo": "Via Roma 123",
+        "citta": "Roma",
+        "telefono": "0123456789"
+    },
+    {
+        "nome": "Giulia",
+        "cognome": "Verdi",
+        "eta": 25,
+        "indirizzo": "Corso Italia 456",
+        "citta": "Milano",
+        "telefono": "0987654321"
+    },
+    {
+        "nome": "Luca",
+        "cognome": "Bianchi",
+        "eta": 40,
+        "indirizzo": "Piazza del Popolo",
+        "citta": "Firenze",
+        "telefono": "0112233445"
+    },
+    {
+        "nome": "Anna",
+        "cognome": "Neri",
+        "eta": 35,
+        "indirizzo": "Viale dei Giardini 78",
+        "citta": "Napoli",
+        "telefono": "0223344556"
+    }
+]

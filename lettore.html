@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettore anagrafica</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        thead td {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Cognome</td>
+                <td>Età</td>
+                <td>Telefono</td>
+                <td>Città</td>
+                <td>Indirizzo</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        let tbody=document.getElementById("tbody");
+        let lett=new XMLHttpRequest();
+        lett.open('GET', 'file.json', true);
+        lett.send();
+        lett.onload=function(){
+            if(this.status>=200 && this.status<300){
+                let d=JSON.parse(this.responseText);
+                d.forEach(p => {
+                    let r=document.createElement("tr");
+                    tbody.appendChild(r);
+                    Object.values(p).forEach(v=>{
+                        let c=document.createElement("td");
+                        c.innerText=v
+                        r.appendChild(c);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>
