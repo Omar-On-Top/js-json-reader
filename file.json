@@ -1,34 +1,38 @@
 [
     {
-        "nome": "Mario",
-        "cognome": "Rossi",
-        "eta": 30,
-        "indirizzo": "Via Roma 123",
-        "citta": "Roma",
-        "telefono": "0123456789"
+        "nome": "Cristiano",
+        "cognome": "Ronaldo",
+        "eta": 38,
+        "citta": "Funchal, Madeira",
+        "squadra_attuale": "Al-Nassr",
+        "nazionalita": "Portoghese",
+        "foto":["ronaldo.gif","ronaldocv.jpg"]
     },
     {
-        "nome": "Giulia",
-        "cognome": "Verdi",
+        "nome": "Lionel",
+        "cognome": "Messi",
+        "eta": 36,
+        "citta": "Rosario",
+        "squadra_attuale": "Inter Miami",
+        "nazionalita": "Argentino",
+        "foto":["messi.gif","messicv.webp"]
+    },
+    {
+        "nome": "Neymar",
+        "cognome": "da Silva Santos Júnior",
+        "eta": 32,
+        "citta": "Mogi das Cruzes",
+        "squadra_attuale": "Al-Hilal",
+        "nazionalita": "Brasiliano",
+        "foto":["neymar.gif","neymarcv.jpg"]
+    },
+    {
+        "nome": "Kylian",
+        "cognome": "Mbappé",
         "eta": 25,
-        "indirizzo": "Corso Italia 456",
-        "citta": "Milano",
-        "telefono": "0987654321"
-    },
-    {
-        "nome": "Luca",
-        "cognome": "Bianchi",
-        "eta": 40,
-        "indirizzo": "Piazza del Popolo",
-        "citta": "Firenze",
-        "telefono": "0112233445"
-    },
-    {
-        "nome": "Anna",
-        "cognome": "Neri",
-        "eta": 35,
-        "indirizzo": "Viale dei Giardini 78",
-        "citta": "Napoli",
-        "telefono": "0223344556"
+        "citta": "Parigi",
+        "squadra_attuale": "Paris Saint-Germain",
+        "nazionalita": "Francese",
+        "foto":["mbappe.gif","mbappecv.jpg"]
     }
 ]

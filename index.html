@@ -17,7 +17,7 @@
             color: white;
         }
 
-        thead td {
+        thead th {
             padding: 12px;
             text-align: left;
             font-weight: bold;
@@ -34,6 +34,9 @@
             border: 1px solid #ddd;
             text-align: left;
         }
+        td:has(img){
+            padding: 0;
+        }
         tbody tr:hover {
             background-color: #ddd;
         }
@@ -42,13 +45,7 @@
 <body>
     <table>
         <thead>
-            <tr>
-                <td>Nome</td>
-                <td>Cognome</td>
-                <td>Età</td>
-                <td>Telefono</td>
-                <td>Città</td>
-                <td>Indirizzo</td>
+            <tr id="testone">
             </tr>
         </thead>
         <tbody id="tbody">
@@ -57,23 +54,43 @@
     </table>
     <script>
         let tbody=document.getElementById("tbody");
+        let thead=document.getElementById("testone");
         let lett=new XMLHttpRequest();
         lett.open('GET', 'file.json', true);
-        lett.send();
         lett.onload=function(){
             if(this.status>=200 && this.status<300){
                 let d=JSON.parse(this.responseText);
+                Object.keys(d[0]).forEach(hv=>{
+                    let h=document.createElement("th");
+                    h.innerText=hv;
+                    thead.appendChild(h)
+                });
                 d.forEach(p => {
                     let r=document.createElement("tr");
                     tbody.appendChild(r);
-                    Object.values(p).forEach(v=>{
+                    Object.entries(p).forEach(([k, v]) => {
                         let c=document.createElement("td");
-                        c.innerText=v
+                        if(k === "foto"){
+                            let a=document.createElement("a");
+                            a.href=v[1];
+                            a.target="_blank"
+                            let img=document.createElement("img");
+                            img.src=v[0];
+                            img.alt="Immagine";
+                            if(p.nome){img.alt+=" di "+p.nome;}
+                            img.style.height="150px"
+                            img.style.width="300px"
+                            a.appendChild(img)
+                            c.appendChild(a)
+                        }else{
+                            c.innerText=v
+                        }
                         r.appendChild(c);
                     });
                 });
             }
         }
+        lett.send();
     </script>
 </body>
 </html>
