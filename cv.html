@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootBall - CV</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 30px;
+        }
+
+        .profile-section div {
+            flex: 1;
+        }
+
+        .profile-section h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .profile-section p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            font-size: 18px;
+            padding: 5px 0;
+        }
+
+        .career-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .career-table, .career-table th, .career-table td {
+            border: 1px solid #ddd;
+        }
+
+        .career-table th, .career-table td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        .career-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .career-item {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER --> 
+    <header>
+        <a href="football.html" class="btn">Torna alla Main Page</a>
+        <span class="json-path" id="json-path">path_relativo_al_json</span>
+    </header>
+    
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- Sezione del profilo -->
+        <section class="profile-section">
+            <img src="ronaldo.jpg" alt="Cristiano Ronaldo" />
+            <div>
+                <h1>Cristiano Ronaldo</h1>
+                <p><strong>Posizione:</strong> Attaccante</p>
+                <p><strong>Data di nascita:</strong> 5 febbraio 1985</p>
+                <p><strong>Nazionalità:</strong> Portoghese</p>
+                <p><strong>Squadra attuale:</strong> Al Nassr</p>
+            </div>
+        </section>
+
+        <!-- Sezione carriera (Tabella) -->
+        <section class="section">
+            <h2>Carriera Professionale</h2>
+            <table class="career-table">
+                <thead>
+                    <tr>
+                        <th>Periodo</th>
+                        <th>Club</th>
+                        <th>Ruolo</th>
+                        <th>Descrizione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023 - Presente</td>
+                        <td>Al Nassr</td>
+                        <td>Attaccante</td>
+                        <td>Gioca attualmente per il club saudita, continuando a brillare come una delle stelle più luminose del calcio mondiale.</td>
+                    </tr>
+                    <tr>
+                        <td>2021 - 2022</td>
+                        <td>Manchester United</td>
+                        <td>Attaccante</td>
+                        <td>Tornato al Manchester United per una seconda esperienza, dove ha continuato a dimostrare la sua classe mondiale.</td>
+                    </tr>
+                    <tr>
+                        <td>2018 - 2021</td>
+                        <td>Juventus</td>
+                        <td>Attaccante</td>
+                        <td>Ha giocato per tre stagioni in Serie A, vincendo numerosi trofei e diventando un pilastro del club.</td>
+                    </tr>
+                    <tr>
+                        <td>2009 - 2018</td>
+                        <td>Real Madrid</td>
+                        <td>Attaccante</td>
+                        <td>Ha vinto 4 Champions League e numerosi trofei nazionali, diventando una leggenda del club.</td>
+                    </tr>
+                    <tr>
+                        <td>2003 - 2009</td>
+                        <td>Manchester United</td>
+                        <td>Attaccante</td>
+                        <td>Ha iniziato la sua carriera internazionale al Manchester United, vincendo il suo primo Pallone d'Oro nel 2008.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sezione delle competenze -->
+        <section class="section">
+            <h2>Competenze</h2>
+            <ul>
+                <li><strong>Abilità tecniche:</strong> Dribbling, tiro, passaggio, gioco di testa</li>
+                <li><strong>Fisico:</strong> Velocità, forza, resistenza</li>
+                <li><strong>Leadership:</strong> Capitano della nazionale portoghese</li>
+                <li><strong>Esperienza internazionale:</strong> Campionato Europeo, Coppa del Mondo, Champions League</li>
+                <li><strong>Linguaggi:</strong> Portoghese (madrelingua), Inglese, Spagnolo</li>
+            </ul>
+        </section>
+
+        <!-- Sezione delle statistiche personali -->
+        <section class="section">
+            <h2>Statistiche Personali</h2>
+            <ul>
+                <li><strong>Goal segnati in carriera:</strong> 850+</li>
+                <li><strong>Assist:</strong> 200+</li>
+                <li><strong>Partite giocate:</strong> 1150+</li>
+                <li><strong>Palloni d'Oro vinti:</strong> 5</li>
+            </ul>
+        </section>
+
+        <!-- Sezione degli obiettivi -->
+        <section class="section">
+            <h2>Obiettivi Futuri</h2>
+            <p>Continuare a vincere trofei internazionali e club, e consolidare il suo posto come uno dei più grandi calciatori di tutti i tempi.</p>
+        </section>
+
+        <a href="https://www.instagram.com/cristiano/" class="btn" target="_blank">Segui su Instagram</a>
+    </div>
+    </div>
+    <script>
+        //`cvjson\\${n}.json`
+        const Nome=localStorage.getItem("Nome");
+        const Path=`${Nome}.json`
+        getI("json-path").innerText="Informazioni Estratte da --> "+Path
+        function getI(id){
+            return document.getElementById(id);
+        }
+    </script>
+</body>
+</html>   

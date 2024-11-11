@@ -1,38 +1,34 @@
 [
     {
-        "nome": "Cristiano",
-        "cognome": "Ronaldo",
-        "eta": 38,
-        "citta": "Funchal, Madeira",
-        "squadra_attuale": "Al-Nassr",
-        "nazionalita": "Portoghese",
-        "foto":["ronaldo.gif","ronaldocv.jpg"]
+        "Nome": "Cristiano",
+        "Cognome": "Ronaldo",
+        "Eta": 38,
+        "Citta": "Funchal, Madeira",
+        "Squadra Attuale": "Al-Nassr",
+        "Nazionalita": "Portoghese"
     },
     {
-        "nome": "Lionel",
-        "cognome": "Messi",
-        "eta": 36,
-        "citta": "Rosario",
-        "squadra_attuale": "Inter Miami",
-        "nazionalita": "Argentino",
-        "foto":["messi.gif","messicv.webp"]
+        "Nome": "Lionel",
+        "Cognome": "Messi",
+        "Eta": 36,
+        "Citta": "Rosario",
+        "Squadra Attuale": "Inter Miami",
+        "Nazionalita": "Argentino"
     },
     {
-        "nome": "Neymar",
-        "cognome": "da Silva Santos Júnior",
-        "eta": 32,
-        "citta": "Mogi das Cruzes",
-        "squadra_attuale": "Al-Hilal",
-        "nazionalita": "Brasiliano",
-        "foto":["neymar.gif","neymarcv.jpg"]
+        "Nome": "Neymar",
+        "Cognome": "da Silva Santos Júnior",
+        "Eta": 32,
+        "Citta": "Mogi das Cruzes",
+        "Squadra Attuale": "Al-Hilal",
+        "Nazionalita": "Brasiliano"
     },
     {
-        "nome": "Kylian",
-        "cognome": "Mbappé",
-        "eta": 25,
-        "citta": "Parigi",
-        "squadra_attuale": "Paris Saint-Germain",
-        "nazionalita": "Francese",
-        "foto":["mbappe.gif","mbappecv.jpg"]
+        "Nome": "Kylian",
+        "Cognome": "Mbappé",
+        "Eta": 25,
+        "Citta": "Parigi",
+        "Squadra Attuale": "Paris Saint-Germain",
+        "Nazionalita": "Francese"
     }
 ]
