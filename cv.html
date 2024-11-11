@@ -36,6 +36,8 @@
             width: 150px;
             height: 150px;
             margin-right: 30px;
+            object-fit: cover;
+            object-position: top
         }
 
         .profile-section div {
@@ -125,7 +127,7 @@
 
         <!-- Sezione del profilo -->
         <section class="profile-section">
-            <img src="ronaldo.jpg" alt="Cristiano Ronaldo" />
+            <img src="loading.gif" alt="Cristiano Ronaldo" id="img"/>
             <div>
                 <h1>Cristiano Ronaldo</h1>
                 <p><strong>Posizione:</strong> Attaccante</p>
@@ -219,6 +221,7 @@
         const Nome=localStorage.getItem("Nome");
         const Path=`${Nome}.json`
         getI("json-path").innerText="Informazioni Estratte da --> "+Path
+        getI("img").src=Nome+".jpg"
         function getI(id){
             return document.getElementById(id);
         }
