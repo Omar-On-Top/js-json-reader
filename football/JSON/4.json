@@ -1,0 +1,40 @@
+{
+    "Profilo": {
+      "Nominativo": "Kylian Mbappé",
+      "Posizione": "Attaccante",
+      "DataNascita": "1998-12-20",
+      "Nazionalita": "Francese",
+      "SquadraAttuale": "Paris Saint-Germain"
+    },
+    "Carriera": [
+      {
+        "Periodo": "2015-2016",
+        "Club": "AS Monaco",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Mbappé inizia la sua carriera professionale con l'AS Monaco, dove diventa subito una stella del calcio francese."
+      },
+      {
+        "Periodo": "2017-presente",
+        "Club": "Paris Saint-Germain",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Nel 2017, Mbappé si trasferisce al PSG, diventando uno dei giocatori più promettenti del panorama calcistico internazionale."
+      }
+    ],
+    "Competenze": {
+      "Abilita": 94,
+      "Fisico": 92,
+      "Leadership": 85,
+      "EsperienzaInternazionale": 90,
+      "Linguaggi": "Francese, Inglese"
+    },
+    "Statistiche": {
+      "Goal": 250,
+      "Assist": 150,
+      "PartiteGiocate": 400,
+      "PalloniDoro": 0,
+      "ScarpeDoro": 0
+    },
+    "Obiettivi": "Vincere il Pallone d'Oro e trionfare in Champions League con il PSG.",
+    "Instagram": "https://www.instagram.com/k.mbappe"
+  }
+  

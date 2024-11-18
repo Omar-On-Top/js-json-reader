@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="football.png">
+    <title>FootBall - Main</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        thead th {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        td:has(img){
+            padding: 0;
+        }
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+        img{
+            height:200px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr id="testone">
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        let tbody=document.getElementById("tbody");
+        let thead=document.getElementById("testone");
+        let lett=new XMLHttpRequest();
+        let c,h;
+        lett.open('GET', 'file.json', true);
+        lett.onload=function(){
+            if(this.status>=200 && this.status<300){
+                let d=JSON.parse(this.responseText);
+                Object.keys(d[0]).forEach(hv=>{
+                    h=document.createElement("th");
+                    if(hv==="ID"){
+                        h.innerText="Immagine"
+                    }else{
+                        h.innerText=hv;
+                    }
+                    thead.appendChild(h)
+                });
+                d.forEach(p => {
+                    let r=document.createElement("tr");
+                    tbody.appendChild(r);
+                    let v=Object.values(p)
+                    v.slice(0,v.length-1).forEach(v => {
+                        c=document.createElement("td");
+                        c.innerText=v;
+                        r.appendChild(c);
+                    });
+                    c=document.createElement("td");
+                    let img=document.createElement("img");
+                    let n=p.ID
+                    img.src=`Foto\\${n}.jpg`;
+                    img.alt="Immagine";
+                    if(n){img.alt+=" di "+n;}
+                    img.onclick=()=>{
+                        redirect(n)
+                    }
+                    c.appendChild(img);
+                    r.appendChild(c);
+                });
+            }else{
+                alert("Qualcosa è andato storto nel caricamento del JSON contenente i dati :(")
+            }
+        }
+        lett.send();
+        function redirect(s){
+            localStorage.setItem("Nome",s);
+            window.location.href="cv.html"
+        }
+    </script>
+</body>
+</html>

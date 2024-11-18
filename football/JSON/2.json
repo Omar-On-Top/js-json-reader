@@ -1,0 +1,46 @@
+{
+    "Profilo": {
+      "Nominativo": "Lionel Messi",
+      "Posizione": "Attaccante",
+      "DataNascita": "1987-06-24",
+      "Nazionalita": "Argentina",
+      "SquadraAttuale": "Paris Saint-Germain"
+    },
+    "Carriera": [
+      {
+        "Periodo": "2000-2003",
+        "Club": "Barcellona B",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Messi inizia la sua carriera professionale nel Barcellona, giocando nelle giovanili prima di passare alla prima squadra."
+      },
+      {
+        "Periodo": "2003-2021",
+        "Club": "FC Barcellona",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Con il Barcellona, Messi è diventato uno dei migliori giocatori di sempre, vincendo numerosi titoli tra cui la Champions League e il Pallone d'Oro."
+      },
+      {
+        "Periodo": "2021-2023",
+        "Club": "Paris Saint-Germain",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Nel 2021, Messi si trasferisce al PSG dopo l'addio al Barcellona, continuando a brillare nel calcio europeo."
+      }
+    ],
+    "Competenze": {
+      "Abilita": 98,
+      "Fisico": 85,
+      "Leadership": 90,
+      "EsperienzaInternazionale": 95,
+      "Linguaggi": "Spagnolo, Catalano, Inglese"
+    },
+    "Statistiche": {
+      "Goal": 750,
+      "Assist": 300,
+      "PartiteGiocate": 1000,
+      "PalloniDoro": 7,
+      "ScarpeDoro": 0
+    },
+    "Obiettivi": "Vincere un altro Pallone d'Oro e aiutare il PSG a trionfare in Champions League.",
+    "Instagram": "https://www.instagram.com/leomessi"
+  }
+  

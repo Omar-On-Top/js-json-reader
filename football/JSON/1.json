@@ -1,0 +1,58 @@
+{
+    "Profilo": {
+      "Nominativo": "Cristiano Ronaldo",
+      "Posizione": "Attaccante",
+      "DataNascita": "1985-02-05",
+      "Nazionalita": "Portoghese",
+      "SquadraAttuale": "Al Nassr"
+    },
+    "Carriera": [
+      {
+        "Periodo": "2003-2009",
+        "Club": "Manchester United",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Ronaldo inizia la sua carriera internazionale, vincendo vari titoli di club e il primo Pallone d'Oro."
+      },
+      {
+        "Periodo": "2009-2018",
+        "Club": "Real Madrid",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Con il Real Madrid diventa uno dei migliori calciatori del mondo, vincendo numerosi trofei e Palloni d'Oro."
+      },
+      {
+        "Periodo": "2018-2021",
+        "Club": "Juventus",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Ronaldo continua a dominare nel calcio europeo, vincendo titoli di campionato e continuando a segnare con regolarità."
+      },
+      {
+        "Periodo": "2022-2023",
+        "Club": "Manchester United",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Ritorno al Manchester United per una breve parentesi prima di trasferirsi in Arabia Saudita."
+      },
+      {
+        "Periodo": "2023-presente",
+        "Club": "Al Nassr",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Passaggio in Arabia Saudita per una nuova avventura professionale con Al Nassr."
+      }
+    ],
+    "Competenze": {
+      "Abilita": 95,
+      "Fisico": 90,
+      "Leadership": 85,
+      "EsperienzaInternazionale": 90,
+      "Linguaggi": "Portoghese, Inglese, Spagnolo"
+    },
+    "Statistiche": {
+      "Goal": 800,
+      "Assist": 220,
+      "PartiteGiocate": 1100,
+      "PalloniDoro": 5,
+      "ScarpeDoro": 1
+    },
+    "Obiettivi": "Vincere la Champions League con la sua attuale squadra e segnare 1000 goal in carriera.",
+    "Instagram": "https://www.instagram.com/cristiano"
+  }
+  

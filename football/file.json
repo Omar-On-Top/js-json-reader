@@ -1,0 +1,38 @@
+[
+    {
+        "Nome": "Cristiano",
+        "Cognome": "Ronaldo",
+        "Eta": 38,
+        "Citta": "Funchal, Madeira",
+        "Squadra Attuale": "Al-Nassr",
+        "Nazionalita": "Portoghese",
+        "ID": 1
+    },
+    {
+        "Nome": "Lionel",
+        "Cognome": "Messi",
+        "Eta": 36,
+        "Citta": "Rosario",
+        "Squadra Attuale": "Inter Miami",
+        "Nazionalita": "Argentino",
+        "ID": 2
+    },
+    {
+        "Nome": "Neymar",
+        "Cognome": "da Silva Santos Júnior",
+        "Eta": 32,
+        "Citta": "Mogi das Cruzes",
+        "Squadra Attuale": "Al-Hilal",
+        "Nazionalita": "Brasiliano",
+        "ID": 3
+    },
+    {
+        "Nome": "Kylian",
+        "Cognome": "Mbappé",
+        "Eta": 25,
+        "Citta": "Parigi",
+        "Squadra Attuale": "Paris Saint-Germain",
+        "Nazionalita": "Francese",
+        "ID": 4
+    }
+]

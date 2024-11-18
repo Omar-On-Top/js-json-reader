@@ -1,0 +1,46 @@
+{
+    "Profilo": {
+      "Nominativo": "Neymar Jr.",
+      "Posizione": "Attaccante",
+      "DataNascita": "1992-02-05",
+      "Nazionalita": "Brasiliana",
+      "SquadraAttuale": "Paris Saint-Germain"
+    },
+    "Carriera": [
+      {
+        "Periodo": "2009-2013",
+        "Club": "Santos",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Neymar esplode in Brasile con il Santos, diventando rapidamente uno dei migliori talenti del calcio mondiale."
+      },
+      {
+        "Periodo": "2013-2017",
+        "Club": "Barcellona",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Neymar si trasferisce al Barcellona, dove forma un tridente letale con Messi e Suarez, vincendo numerosi titoli tra cui la Champions League."
+      },
+      {
+        "Periodo": "2017-presente",
+        "Club": "Paris Saint-Germain",
+        "Ruolo": "Attaccante",
+        "Descrizione": "Nel 2017, Neymar diventa il giocatore più costoso della storia del calcio con il suo trasferimento al PSG."
+      }
+    ],
+    "Competenze": {
+      "Abilita": 92,
+      "Fisico": 88,
+      "Leadership": 80,
+      "EsperienzaInternazionale": 85,
+      "Linguaggi": "Portoghese, Spagnolo, Francese"
+    },
+    "Statistiche": {
+      "Goal": 400,
+      "Assist": 250,
+      "PartiteGiocate": 650,
+      "PalloniDoro": 0,
+      "ScarpeDoro": 0
+    },
+    "Obiettivi": "Vincere la Champions League con il PSG e diventare il miglior giocatore del mondo.",
+    "Instagram": "https://www.instagram.com/neymarjr"
+  }
+  
