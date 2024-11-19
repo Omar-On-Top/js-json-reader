@@ -68,12 +68,15 @@
                 Object.keys(d[0]).forEach(hv=>{
                     h=document.createElement("th");
                     if(hv==="ID"){
-                        h.innerText="Immagine"
+                        h.innerText="Preview CV";
                     }else{
                         h.innerText=hv;
                     }
-                    thead.appendChild(h)
+                    thead.appendChild(h);
                 });
+                h=document.createElement("th");
+                h.innerText="PortFolio";
+                thead.appendChild(h);
                 d.forEach(p => {
                     let r=document.createElement("tr");
                     tbody.appendChild(r);
@@ -83,26 +86,29 @@
                         c.innerText=v;
                         r.appendChild(c);
                     });
-                    c=document.createElement("td");
-                    let img=document.createElement("img");
-                    let n=p.ID
-                    img.src=`Foto\\${n}.jpg`;
-                    img.alt="Immagine";
-                    if(n){img.alt+=" di "+n;}
-                    img.onclick=()=>{
-                        redirect(n)
-                    }
-                    c.appendChild(img);
-                    r.appendChild(c);
+                    r.appendChild(tdimg(`Foto\\${p.ID}.jpg`,p.ID,"cv"));
+                    r.appendChild(tdimg("portfolio.jpg",p.ID,"portfolio"));
                 });
             }else{
                 alert("Qualcosa è andato storto nel caricamento del JSON contenente i dati :(")
             }
         }
         lett.send();
-        function redirect(s){
+        function redirect(s,ht){
             localStorage.setItem("Nome",s);
-            window.location.href="./cv.html"
+            window.location.href=`./${ht}.html`
+        }
+        function tdimg(src,n,ht){
+            c=document.createElement("td");
+            let img=document.createElement("img");
+            img.src=src;
+            img.alt="Immagine";
+            if(n){img.alt+=" di "+n;}
+            img.onclick=()=>{
+                redirect(n,ht);
+            }
+            c.appendChild(img);
+            return c;
         }
     </script>
 </body>
