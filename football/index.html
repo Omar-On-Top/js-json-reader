@@ -62,7 +62,7 @@
 
         </tbody>
     </table>
-    <script>
+    <script>//idee future: aggiungere i titoli su cv e portfolio dinamicamente col nome del giocatore
         let tbody=document.getElementById("tbody");
         let thead=document.getElementById("testone");
         let lett=new XMLHttpRequest();
@@ -92,8 +92,8 @@
                         c.innerText=v;
                         r.appendChild(c);
                     });
-                    r.appendChild(tdimg(`Foto\\${p.ID}.jpg`,p.ID,"cv"));
-                    r.appendChild(tdimg("portfolio.jpg",p.ID,"portfolio"));
+                    r.appendChild(tdimg(`Foto\\${p.ID}.jpg`,p.ID,"cv"));//l'ultimo valore indica la pagina di redirect cv=cv.html
+                    r.appendChild(tdimg("portfolio.jpg",p.ID,"portfolio"));// portfolio=portfolio.html
                 });
             }else{
                 alert("Qualcosa è andato storto nel caricamento del JSON contenente i dati :(")

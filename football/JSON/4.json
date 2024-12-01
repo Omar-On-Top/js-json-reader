@@ -2,9 +2,9 @@
     "Profilo": {
       "Nominativo": "Kylian Mbappé",
       "Posizione": "Attaccante",
-      "DataNascita": "1998-12-20",
+      "Data di Nascita": "1998-12-20",
       "Nazionalita": "Francese",
-      "SquadraAttuale": "Paris Saint-Germain"
+      "Squadra Attuale": "Paris Saint-Germain"
     },
     "Carriera": [
       {
@@ -24,15 +24,15 @@
       "Abilita": 94,
       "Fisico": 92,
       "Leadership": 85,
-      "EsperienzaInternazionale": 90,
+      "Esperienza Internazionale": 90,
       "Linguaggi": "Francese, Inglese"
     },
     "Statistiche": {
       "Goal": 250,
       "Assist": 150,
-      "PartiteGiocate": 400,
-      "PalloniDoro": 0,
-      "ScarpeDoro": 0
+      "Partite Giocate": 400,
+      "Palloni D'oro": 0,
+      "Scarpe D'oro": 0
     },
     "Obiettivi": "Vincere il Pallone d'Oro e trionfare in Champions League con il PSG.",
     "Instagram": "https://www.instagram.com/k.mbappe"

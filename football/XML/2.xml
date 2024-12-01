@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+    <Profilo>
+        <Nominativo>Lionel Messi</Nominativo>
+        <Posizione>Attaccante</Posizione>
+        <DataDiNascita>1987-06-24</DataDiNascita>
+        <Nazionalita>Argentina</Nazionalita>
+        <SquadraAttuale>Paris Saint-Germain</SquadraAttuale>
+    </Profilo>
+    <Link>
+        <Video>
+            <Titolo>Gol contro il Getafe</Titolo>
+            <ID>LJfkHg7KMBc</ID>
+        </Video>
+        <Video>
+            <Titolo>Quattro gol contro l'Arsenal</Titolo>
+            <ID>5m8OS0BydgI</ID>
+        </Video>
+        <Video>
+            <Titolo>Cinque gol per il Barcellona</Titolo>
+            <ID>_qEJSIdeuDU</ID>
+        </Video>
+        <Video>
+            <Titolo>Gol di punizione contro il Liverpool</Titolo>
+            <ID>sm92yxH9uO4</ID>
+        </Video>
+    </Link>
+</Data>

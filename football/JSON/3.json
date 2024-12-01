@@ -2,9 +2,9 @@
     "Profilo": {
       "Nominativo": "Neymar Jr.",
       "Posizione": "Attaccante",
-      "DataNascita": "1992-02-05",
+      "Data di Nascita": "1992-02-05",
       "Nazionalita": "Brasiliana",
-      "SquadraAttuale": "Paris Saint-Germain"
+      "Squadra Attuale": "Paris Saint-Germain"
     },
     "Carriera": [
       {
@@ -30,15 +30,15 @@
       "Abilita": 92,
       "Fisico": 88,
       "Leadership": 80,
-      "EsperienzaInternazionale": 85,
+      "Esperienza Internazionale": 85,
       "Linguaggi": "Portoghese, Spagnolo, Francese"
     },
     "Statistiche": {
       "Goal": 400,
       "Assist": 250,
-      "PartiteGiocate": 650,
-      "PalloniDoro": 0,
-      "ScarpeDoro": 0
+      "Partite Giocate": 650,
+      "Palloni D'oro": 0,
+      "Scarpe D'oro": 0
     },
     "Obiettivi": "Vincere la Champions League con il PSG e diventare il miglior giocatore del mondo.",
     "Instagram": "https://www.instagram.com/neymarjr"

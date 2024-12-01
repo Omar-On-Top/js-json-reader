@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+    <Profilo>
+        <Nominativo>Cristiano Ronaldo</Nominativo>
+        <Posizione>Attaccante</Posizione>
+        <DataDiNascita>1985-02-05</DataDiNascita>
+        <Nazionalita>Portoghese</Nazionalita>
+        <SquadraAttuale>Al Nassr</SquadraAttuale>
+    </Profilo>
+    <Link>
+        <Video>
+            <Titolo>Gol contro la Juventus in rovesciata</Titolo>
+            <ID>ZC_XihZGPEg</ID>
+        </Video>
+        <Video>
+            <Titolo>Tripletta contro l'Atletico Madrid</Titolo>
+            <ID>cLfSpFg6Pxg</ID>
+        </Video>
+        <Video>
+            <Titolo>Debutto con il Manchester United</Titolo>
+            <ID>edNnaCRlzx4</ID>
+        </Video>
+        <Video>
+            <Titolo>Gol decisivo in finale di Champions</Titolo>
+            <ID>fqQOOMRdFx0</ID>
+        </Video>
+    </Link>
+</Data>

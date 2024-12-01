@@ -2,9 +2,9 @@
     "Profilo": {
       "Nominativo": "Cristiano Ronaldo",
       "Posizione": "Attaccante",
-      "DataNascita": "1985-02-05",
+      "Data di Nascita": "1985-02-05",
       "Nazionalita": "Portoghese",
-      "SquadraAttuale": "Al Nassr"
+      "Squadra Attuale": "Al Nassr"
     },
     "Carriera": [
       {
@@ -42,15 +42,15 @@
       "Abilita": 95,
       "Fisico": 90,
       "Leadership": 85,
-      "EsperienzaInternazionale": 90,
+      "Esperienza Internazionale": 90,
       "Linguaggi": "Portoghese, Inglese, Spagnolo"
     },
     "Statistiche": {
       "Goal": 800,
       "Assist": 220,
-      "PartiteGiocate": 1100,
-      "PalloniDoro": 5,
-      "ScarpeDoro": 1
+      "Partite Giocate": 1100,
+      "Palloni D'oro": 5,
+      "Scarpe D'oro": 1
     },
     "Obiettivi": "Vincere la Champions League con la sua attuale squadra e segnare 1000 goal in carriera.",
     "Instagram": "https://www.instagram.com/cristiano"

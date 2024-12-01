@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="cv.png">
     <title>FootBall - CV</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -126,7 +126,7 @@
     <!-- MAIN CONTENT -->
     <div class="container" id="cont">
         <section class="profile-section">
-            <img src="loading.gif" alt="Cristiano Ronaldo" id="img"/>
+            <img src="loading.gif" alt="Immagine" id="img"/>
             <div id="prof">
             </div>
         </section>
@@ -171,9 +171,8 @@
             lett.open('GET', JSONPath, true);
             lett.onload=function(){
                 if(this.status>=200 && this.status<300){
-                    let d=JSON.parse(this.responseText);
+                    const d=JSON.parse(this.responseText);
                     let t;// per non dover ridichiare variabile per le varie stringhe
-
                     //Profilo
                     let inp=d.Profilo;//variabile per l'input dal json
                     let out=getI("prof");//variabile per l'output su html
@@ -227,7 +226,7 @@
                     t.innerHTML=`<strong>Obiettivi:</strong> ${inp}`;
                     out.appendChild(t);
                 }else{
-                    alert("Qualcosa è andato storto nel caricamento del JSON contenente i dati :(")
+                    alert("Qualcosa è andato storto nel caricamento del file JSON contenente i dati :(")
                 }
             }
             lett.send();

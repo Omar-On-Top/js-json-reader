@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+    <Profilo>
+        <Nominativo>Neymar Jr.</Nominativo>
+        <Posizione>Attaccante</Posizione>
+        <DataDiNascita>1992-02-05</DataDiNascita>
+        <Nazionalita>Brasiliana</Nazionalita>
+        <SquadraAttuale>Paris Saint-Germain</SquadraAttuale>
+    </Profilo>
+    <Link>
+        <Video>
+            <Titolo>Gol spettacolare contro il Villarreal</Titolo>
+            <ID>v0lFr51XMvg</ID>
+        </Video>
+        <Video>
+            <Titolo>Rimonta storica del Barcellona contro il PSG</Titolo>
+            <ID>XdpAwsTnrnU</ID>
+        </Video>
+        <Video>
+            <Titolo>Assist incredibile contro la Colombia</Titolo>
+            <ID>iXqm5u1rvkg</ID>
+        </Video>
+        <Video>
+            <Titolo>Vittoria nella Copa Libertadores del 2011</Titolo>
+            <ID>fVOpRvDxqUM</ID>
+        </Video>
+    </Link>
+</Data>

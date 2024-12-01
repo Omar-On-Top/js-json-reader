@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+    <Profilo>
+        <Nominativo>Kylian Mbappé</Nominativo>
+        <Posizione>Attaccante</Posizione>
+        <DataDiNascita>1998-12-20</DataDiNascita>
+        <Nazionalita>Francese</Nazionalita>
+        <SquadraAttuale>Paris Saint-Germain</SquadraAttuale>
+    </Profilo>
+    <Link>
+        <Video>
+            <Titolo>Gol contro l'Argentina nel Mondiale 2018</Titolo>
+            <ID>6C6oOcDFmLY</ID>
+        </Video>
+        <Video>
+            <Titolo>Gol decisivo contro Real Madrid 2022</Titolo>
+            <ID>-akQm6JOBjw</ID>
+        </Video>
+        <Video>
+            <Titolo>Tripletta contro il Barcellona</Titolo>
+            <ID>Rky4Dhpkvjg</ID>
+        </Video>
+        <Video>
+            <Titolo>Secondo Gol decisivo contro il Bayern</Titolo>
+            <ID>_8HSyHk5vmg</ID>
+        </Video>
+    </Link>
+</Data>

@@ -2,9 +2,9 @@
     "Profilo": {
       "Nominativo": "Lionel Messi",
       "Posizione": "Attaccante",
-      "DataNascita": "1987-06-24",
+      "Data di Nascita": "1987-06-24",
       "Nazionalita": "Argentina",
-      "SquadraAttuale": "Paris Saint-Germain"
+      "Squadra Attuale": "Paris Saint-Germain"
     },
     "Carriera": [
       {
@@ -30,15 +30,15 @@
       "Abilita": 98,
       "Fisico": 85,
       "Leadership": 90,
-      "EsperienzaInternazionale": 95,
+      "Esperienza Internazionale": 95,
       "Linguaggi": "Spagnolo, Catalano, Inglese"
     },
     "Statistiche": {
       "Goal": 750,
       "Assist": 300,
-      "PartiteGiocate": 1000,
-      "PalloniDoro": 7,
-      "ScarpeDoro": 0
+      "Partite Giocate": 1000,
+      "Palloni D'oro": 7,
+      "Scarpe D'oro": 0
     },
     "Obiettivi": "Vincere un altro Pallone d'Oro e aiutare il PSG a trionfare in Champions League.",
     "Instagram": "https://www.instagram.com/leomessi"
