@@ -1,1 +1,158 @@
-ferwg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenShare ITA Fivem api view</title>
+    <style>
+        /* Generale */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #Players {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Card dei player */
+        .player-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        .player-card h4 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .player-card p {
+            margin: 5px 0;
+        }
+
+        /* Sezioni */
+        .general-info {
+            margin-bottom: 15px;
+        }
+
+        .identifiers-section {
+            background: #f9f9f9;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .identifiers-section p {
+            font-size: 14px;
+            color: #444;
+            margin: 5px 0;
+        }
+
+        /* Divider */
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="Result">
+        <h1 id="ResultTitle"></h1>
+        <div id="Info">
+            <div id="Connected Enpoints"></div>
+            <div id="Risorse"></div>
+            <div id="Variabili"></div>
+        </div>
+        <div id="Players">
+
+        </div>
+    </div>
+    <script>
+        const baselink="https://servers-frontend.fivem.net/api/servers/single/";
+        let linkimp=getAPILink("ga97ym");
+
+        let titleout=getI("ResultTitle")
+        let playerout=getI("Players")
+
+        fetch(linkimp)
+        .then(response => response.json())  // Converte la risposta in formato JSON
+        .then(d => {
+            titleout.textContent="Endpoint: "+d.EndPoint;
+            data=d.Data
+            players=data.players
+            players.forEach(player => {
+                let playerCard = document.createElement("div");
+                playerCard.classList.add("player-card");
+
+                // Dati generali del player
+                let generalInfo = document.createElement("div");
+                generalInfo.classList.add("general-info");
+
+                Object.entries(player).forEach(([key, value]) => {
+                    if (!Array.isArray(value)) {
+                        let infoItem = document.createElement("p");
+                        infoItem.innerHTML = `<strong>${key}</strong>: ${value}`;
+                        generalInfo.appendChild(infoItem);
+                    }
+                });
+
+                playerCard.appendChild(generalInfo);
+
+                // Identifiers
+                if (player.identifiers && player.identifiers.length > 0) {
+                    let identifiersSection = document.createElement("div");
+                    identifiersSection.classList.add("identifiers-section");
+
+                    let identifiersTitle = document.createElement("h4");
+                    identifiersTitle.innerText = "Identifiers";
+                    identifiersSection.appendChild(identifiersTitle);
+
+                    player.identifiers.forEach(id => {
+                        const [key, value] = id.split(':');
+                        let identifierItem = document.createElement("p");
+                        identifierItem.innerHTML = `<strong>${key}</strong>: ${value}`;
+                        identifiersSection.appendChild(identifierItem);
+                    });
+
+                    playerCard.appendChild(identifiersSection);
+                }
+                playerout.appendChild(playerCard);
+            });
+        })
+        .catch(error => {
+            console.error('Errore nella richiesta:', error);
+        });
+        function convertIDs(arr) {
+            return arr.reduce((acc,item)=>{
+                const [key, value] = item.split(':');
+                if(!acc[key]){
+                    acc[key]=value;
+                }/*else{
+                    acc[key]=Array.isArray(acc[key]) ? [...acc[key], value] : [acc[key], value];
+                }//useless cancello e basta*/
+                return acc;
+            },{});
+        }
+        function getI(id){
+            return document.getElementById(id)
+        }
+        function getAPILink(endpoint){
+            return baselink+endpoint;
+        }
+    </script>
+</body>
+</html>
