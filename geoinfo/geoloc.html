@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocator</title>
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Stile generale per il contenitore principale */
+        #scatola {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stile per il titolo */
+        #title {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Stile per il contenitore interno */
+        #innerBox {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Stile per i paragrafi */
+        #innerBox p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Stile per i link */
+        #innerBox a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #innerBox a:hover {
+            text-decoration: underline;
+        }
+
+        /* Stile per le etichette */
+        #innerBox label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Stile per gli input di tipo range */
+        #innerBox input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        /* Stile per la linea orizzontale */
+        #innerBox hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+
+        /* Stile per la mappa */
+        #map {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="scatola">
+        <h1 id="title">Share location info with the site</h1>
+        <div id="innerBox">
+            <p>Are you having difficulties enabling geolocation services in windows?<a href="https://www.youtube.com/watch?v=MfTVNjEsHjA" target="_blank">Visit this link!</a></p>
+        </div>
+        <div id="map" style="width: 100%; height: 400px;"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+
+        //GLOBAL VARS
+        let OSMH=16;//altezza osm
+        let MapsH=16;//altezza maps
+        let latitude;//latitudine
+        let longitude;//longitudin
+        let date;//data ricevimento dati
+
+        let maps;//oggetto con link maps
+        let osm;//oggetto con link osm
+        let mapsl;//oggetto con label altezza maps
+        let osml;//oggetto con label altezza osm
+        const innerBox=getI("innerBox");//oggetto da riempire
+        const titolo=getI("title");//oggetto con titolo
+
+        let geo=navigator.geolocation;//variabile per geolocation
+        if(geo){
+            geo.getCurrentPosition(
+                function(success) {//SUCCESS se la richiesta va a buon fine (nome anche della variabile con la response)
+                    console.log("Posizione ottenuta con successo:", success);
+                    latitude = success.coords.latitude;
+                    longitude = success.coords.longitude;
+                    date = new Date (success.timestamp);
+                    
+                    titolo.innerText="GeoData Extracted"
+                    innerBox.innerHTML=`
+                    <p><strong>Data:</strong> ${date.toLocaleString()}</p>
+                    <p><strong>Latitudine:</strong> ${latitude}</p>
+                    <p><strong>Latitudine:</strong> ${longitude}</p>
+
+                    <hr>
+
+                    <a href="${getMapsLink()}" target="_blank" id="gmaps">Visita su GoogleMaps</a><br>
+                    <label for="mapsH" id="labgmaps">Altezza = 16</label><br>
+                    <input type="range" min="3" max="21" id="MapsH" value="16" onchange="updateMapsH(this.value)">
+                    
+                    <hr>
+
+                    <a href="${getOSMLink()}" target="_blank" id="osm">Visita su OpenStreetMap</a><br>
+                    <label for="OSMH" id="labosm">Altezza = 16</label><br>
+                    <input type="range" min="0" max="19" id="OSMH" value="16" onchange="updateOSMH(this.value)">
+                    `
+                    osm=getI("osm");
+                    osml=getI("labosm");
+                    maps=getI("gmaps");
+                    mapsl=getI("labgmaps");
+                    
+                    // Inizializza la mappa
+                    const map = L.map('map').setView([latitude, longitude], OSMH); // Imposta la vista sulla posizione ottenuta
+
+                    // Aggiungi il layer di OpenStreetMap
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+                    // Aggiungi un marker alla posizione ottenuta
+                    L.marker([latitude, longitude]).addTo(map)
+                        .bindPopup('Sei qui!') // Aggiungi un popup al marker
+                        .openPopup();
+                },
+                function(error) {
+                    console.error("Errore nel recupero della posizione:", error);
+                    alert("Errore nel recupero della tua posizione :(\nSe il problema persiste contatta un amministratore del sito")
+                },
+                {
+                    enableHighAccuracy: true, // Usa questa opzione per non forzare l'alta precisione
+                    timeout: 5000, // Tempo massimo di attesa in millisecondi (opzionale)
+                    maximumAge: 0 // Se non vuoi che venga usata una posizione memorizzata in cache (opzionale)
+                }
+            )
+        } else {
+            alert("Come ti permetti a non autorizzarmi >:(")
+        }
+
+
+        function updateMapsH(height){
+            MapsH=height;
+            maps.href=getMapsLink();
+            mapsl.innerText=`Altezza = ${MapsH}`
+        }
+        function updateOSMH(height){
+            OSMH=height;
+            osm.href=getOSMLink();
+            osml.innerText=`Altezza = ${OSMH}`
+        }
+
+
+        function getMapsLink(){
+            return `https://www.google.it/maps/@${latitude},${longitude},${MapsH}z`
+        }
+        function getOSMLink(){
+            return `https://www.openstreetmap.org/#map=${OSMH}/${latitude}/${longitude}`
+        }
+
+
+        function getI(id){
+            return document.getElementById(id);
+        }
+    </script>
+</body>
+</html>
